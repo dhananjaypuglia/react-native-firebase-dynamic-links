@@ -1,6 +1,24 @@
+import {DeviceEventEmitter} from 'react-native';
 
-import { NativeModules } from 'react-native';
+class RNFirebaseDynamicLinks {
+  static subscription;
 
-const { RNFirebaseDynamicLinks } = NativeModules;
+  addListener (listenser) {
+    if (listenser) {
+      this.subscription = DeviceEventEmitter.addListener(
+        'onDeepLinkReceived',
+        (link) => listenser(link)
+      );
+    }
+  }
 
-export default RNFirebaseDynamicLinks;
+  removeListener () {
+    if (this.subscription) {
+      this.subscription.remove();
+    }
+  }
+}
+
+const rnFirebaseDynamicLinks = new RNFirebaseDynamicLinks();
+
+export default rnFirebaseDynamicLinks;

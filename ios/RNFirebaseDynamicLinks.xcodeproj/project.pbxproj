@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375368A11F78029900D41400 /* RNFirebaseDynamicLinks.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3E7B5881CC2AC0600A0062D /* RNFirebaseDynamicLinks.h */; };
 		B3E7B58A1CC2AC0600A0062D /* RNFirebaseDynamicLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNFirebaseDynamicLinks.m */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				375368A11F78029900D41400 /* RNFirebaseDynamicLinks.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -24,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNFirebaseDynamicLinks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFirebaseDynamicLinks.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3753689F1F7800BD00D41400 /* RNFirebaseDynamicLinks+AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RNFirebaseDynamicLinks+AppDelegate.m"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNFirebaseDynamicLinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFirebaseDynamicLinks.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNFirebaseDynamicLinks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFirebaseDynamicLinks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +53,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				3753689F1F7800BD00D41400 /* RNFirebaseDynamicLinks+AppDelegate.m */,
 				B3E7B5881CC2AC0600A0062D /* RNFirebaseDynamicLinks.h */,
 				B3E7B5891CC2AC0600A0062D /* RNFirebaseDynamicLinks.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -204,7 +208,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",

@@ -1,0 +1,46 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Example' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Example
+  # Required by RNFirebase
+  pod 'Firebase/Core', '4.1.0'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
+  # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
+  pod 'Firebase/DynamicLinks', '4.1.0'
+
+  # Have introduced this because of https://github.com/facebook/react-native/issues/12814#issuecomment-321947367
+  pod 'React',
+     :path => "../node_modules/react-native",
+     :subspecs => [
+       "Core",
+       "ART",
+       "RCTActionSheet",
+       "RCTAnimation",
+       "RCTCameraRoll",
+       "RCTGeolocation",
+       "RCTImage",
+       "RCTNetwork",
+       "RCTText",
+       "RCTVibration",
+       "RCTWebSocket",
+       "DevSupport",
+       "BatchedBridge"
+     ]
+
+  pod 'Yoga',
+     :path => "../node_modules/react-native/ReactCommon/yoga"
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end

@@ -32,5 +32,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    compile "com.google.firebase:firebase-invites:11.0.0"
 }
   
